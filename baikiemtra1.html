@@ -1,0 +1,30 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIEM TRA GIUA MODULE</title>
+</head>
+<body>
+<script>
+    let inputNumber = parseInt(prompt("Enter the number :"));
+    alert(isPrime(inputNumber));
+
+    function isPrime(number) {
+        let check = true;
+        if (number < 2) {
+            check = false;
+        } else if (number === 2) {
+            check = true;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+</script>
+</body>
+</html>

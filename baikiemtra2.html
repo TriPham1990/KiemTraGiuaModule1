@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <title>KIEM TRA GIUA MODULE</title>
+</head>
+<body>
+<script>
+    let arrNumber1 = [10, 5, 2, 8, 7, 13];
+    let arrNumber2 = [2, 4, 5, 6, 8];
+
+    alert("List Prime 1 : " + '[' + listPrime(arrNumber1) + ']');
+    alert('List Prime 2 : ' + '[' + listPrime(arrNumber2) + ']');
+
+    function isPrime(number) {
+        let check = true;
+        if (number < 2) {
+            check = false;
+        } else if (number === 2) {
+            check = true;
+        } else {
+            for (let i = 2; i < number; i++) {
+                if (number % i === 0) {
+                    check = false;
+                    break;
+                }
+            }
+        }
+        return check;
+    }
+
+    function listPrime(array) {
+        let arrayPrime = [];
+        for (let i = 0; i < array.length; i++) {
+            if (isPrime(array[i])) {
+                arrayPrime.push(array[i]);
+            }
+        }
+        return arrayPrime;
+    }
+</script>
+</body>
+</html>
